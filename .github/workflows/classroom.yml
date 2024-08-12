@@ -1,0 +1,57 @@
+name: Autograding Tests
+
+on:
+  push:
+    branches:
+      - main
+      - master
+  workflow_dispatch:
+  repository_dispatch:
+
+permissions:
+  checks: write
+  actions: read
+  contents: read
+
+jobs:
+  run-autograding-tests:
+    runs-on: ubuntu-latest
+    if: github.actor != 'github-classroom[bot]'
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Set up Java
+      uses: actions/setup-java@v3
+      with:
+        distribution: 'adopt'
+        java-version: '11'
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'
+
+    - name: Install Python dependencies
+      run: |
+        pip install flake8 pytest
+
+    - name: Run Python Linting (PEP 8)
+      run: |
+        flake8 src/
+
+    - name: Run Python Tests
+      run: |
+        pytest --maxfail=1 --disable-warnings
+
+    - name: Run Gradle Tests
+      run: |
+        gradle test
+
+    - name: Autograding Reporter
+      uses: classroom-resources/autograding-grading-reporter@v1
+      env:
+        PYTHON_LINT_RESULTS: "${{ steps.python-lint.outputs.result }}"
+        PYTHON_TEST_RESULTS: "${{ steps.python-tests.outputs.result }}"
+        GRADLE_TEST_RESULTS: "${{ steps.gradle-tests.outputs.result }}"

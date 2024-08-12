@@ -201,5 +201,4 @@ If you have any questions, issues, or suggestions, feel free to open an issue in
 - **Contributing Section**: Encourages users to contribute to the project, providing steps to make it easy.
 - **Visual Appeal**: Clean layout with sections clearly delineated by headers and lists, making the README both functional and visually appealing.
 
-> [!info] 
 > This README is designed to be instructional, informative, and welcoming to contributors, making it a strong foundation for your repository.

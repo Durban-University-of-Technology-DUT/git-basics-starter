@@ -132,7 +132,6 @@ For more information on how to use or extend these utilities, check out the foll
 
 If you have any questions or need further assistance, please open an issue on the GitHub repository, or reach out directly via [info@skunkworks.africa](mailto:info@skunkworks.africa).
 
-```
 
 ### Key Updates:
 
@@ -140,4 +139,4 @@ If you have any questions or need further assistance, please open an issue on th
 - **Java and Python Examples**: Provided specific examples for both the Java and Python utilities, ensuring users know how to utilize these functions in their respective environments.
 - **Consistent Structure**: Maintains a clean and organized format, with sections for usage, contributions, and additional resources, making it easy to follow.
 
-This `README.md` provides a comprehensive guide for users and contributors, tailored to the dual-language nature of your project.
+> This `README.md` provides a comprehensive guide for users and contributors, tailored to the dual-language nature of your project.

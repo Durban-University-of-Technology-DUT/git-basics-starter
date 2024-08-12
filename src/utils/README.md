@@ -1,4 +1,3 @@
-```markdown
 # Utilities Module
 
 [![Build Status](https://img.shields.io/github/actions/workflow/status/your-org/git-basics-starter/build.yml?branch=main)](https://github.com/your-org/git-basics-starter/actions)

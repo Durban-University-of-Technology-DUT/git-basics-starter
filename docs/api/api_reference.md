@@ -12,17 +12,19 @@ All API requests should be made to the following base URL:
 https://api.yourdomain.com/v1/
 ```
 
-Endpoints
-1. GET /users
-Description: Retrieve a list of all users.
-Method: GET
-URL: /users
-Parameters:
-page (optional): The page number to retrieve.
-limit (optional): The number of users per page.
-Response:
-Status Code: 200 OK
-Body:
+# Endpoints
+
+## 1. **`GET /users`**
+- **Description:** Retrieve a list of all users.
+- **Method:** GET
+- **URL:** /users
+- **Parameters:**
+  - **page (optional):** The page number to retrieve.
+  - **limit (optional):** The number of users per page.
+- **Response:**
+  - **Status Code:** 200 OK
+  - **Body:**
+
 ``` json
 {
   "users": [
@@ -37,47 +39,49 @@ Body:
   "total_pages": 10
 }
 ```
-- Example Request:
-```bash Copy code
+
+- **Example Request:**
+
+``` bash
 curl -X GET "https://api.yourdomain.com/v1/users?page=1&limit=10"
 ```
 
-2. POST /users
-- Description: Create a new user.
-- Method: POST
-- URL: /users
-- Request Body:
-  - Content-Type: application/json
-  - Body:
-```json
-Copy code
+## 2. **`POST /users`**
+- **Description:** Create a new user.
+- **Method:** POST
+- **URL:** /users
+- **Request Body:*8
+  - **Content-Type:** application/json
+  - **Body:**
+
+``` json
+
 {
   "name": "Bob",
   "email": "bob@example.com"
 }
 ```
 
-- Response:
-  - Status Code: 201 Created
-  - Body:
-```json
-Copy code
+- **Response:**
+  - *8Status Code:** 201 Created
+  - **Body:**
+
+``` json 
 {
   "id": "2",
   "name": "Bob",
   "email": "bob@example.com"
 }
 ```
-- Example Request:
-```bash
-Copy code
+
+- **Example Request:**
+
+``` bash
+
 curl -X POST "https://api.yourdomain.com/v1/users" -H "Content-Type: application/json" -d '{"name": "Bob", "email": "bob@example.com"}'
 ```
 
 _Add additional endpoints following this template._
-
-```go
-Copy code
 
 ### 3. **`design/` Directory: Design Documents**
 
@@ -85,7 +89,6 @@ Copy code
 
 This `README.md` file provides an overview of the design documentation contained in the `design/` directory.
 
-```markdown
 # Design Documents
 
 This directory contains the design documentation for the project, including architecture diagrams, design decisions, and technical specifications.
@@ -94,4 +97,3 @@ This directory contains the design documentation for the project, including arch
 
 - **`architecture_diagram.png`**: A visual representation of the system's architecture.
 - **`technical_specifications.md`**: Detailed technical specifications and design decisions made during the development of the project.
-```

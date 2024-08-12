@@ -8,7 +8,7 @@ This document provides detailed information on the API endpoints available in th
 
 All API requests should be made to the following base URL:
 
-```plaintext
+``` plaintext
 https://api.yourdomain.com/v1/
 ```
 
@@ -23,8 +23,7 @@ limit (optional): The number of users per page.
 Response:
 Status Code: 200 OK
 Body:
-```json
-Copy code
+``` json
 {
   "users": [
     {
